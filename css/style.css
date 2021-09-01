@@ -6,7 +6,7 @@ body::-webkit-scrollbar { display: none; }
 
 body .square { outline: 0.4em solid blue; max-height: 100%; }
 
-body .square ul { list-style: none; display: -ms-grid; display: grid; }
+body .square ul { list-style: none; display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[10]; grid-template-columns: repeat(10, 1fr); }
 
 body .square ul > li { aspect-ratio: 1; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-height: 2em; cursor: pointer; outline: 0.2em solid blue; }
 

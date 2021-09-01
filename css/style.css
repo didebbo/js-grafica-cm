@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-body { font-family: monospace; font-size: 3vmin; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+body { font-family: monospace; font-size: 3vmin; font-weight: bold; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 body::-webkit-scrollbar { display: none; }
 
@@ -8,4 +8,6 @@ body ul { width: 66.66667%; padding: 1em 0; list-style: none; display: -webkit-b
 
 body ul > li { display: -webkit-box; display: -ms-flexbox; display: flex; width: 10%; padding: 0.5em; }
 
-body ul > li > div { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; text-align: center; border: 0.2em solid blue; padding: 1em 0; }
+body ul > li > div { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; text-align: center; border: 0.2em solid blue; padding: 1em 0; cursor: pointer; }
+
+body ul > li > div.focus { background-color: red; color: white; }

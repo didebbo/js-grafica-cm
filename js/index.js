@@ -10,8 +10,13 @@ const genGrid = (num) => {
         let content = document.createElement("div");
         cell.appendChild(content);
         content.innerHTML = i;
-        // console.log(cell);
         grid.appendChild(cell);
+
+        // Aggiunto evento click
+        content.addEventListener("click", (e) => {
+            alert(e.target.innerHTML);
+            e.target.classList.toggle("focus");
+        })
     }
 }
 

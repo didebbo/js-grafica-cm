@@ -5,15 +5,16 @@ const grid = document.getElementById("grid");
 
 const genGrid = (num) => {
 
-    for (let i = 1; i <= num; i++) {
+    let totalCells = num * num;
+
+    for (let i = 1; i <= totalCells; i++) {
         let cell = document.createElement("li");
-        let content = document.createElement("div");
-        cell.appendChild(content);
-        content.innerHTML = i;
+        cell.innerHTML = i;
+        grid.style.gridTemplateColumns = "repeat(" + num + ",1fr)";
         grid.appendChild(cell);
 
         // Aggiunto evento click
-        content.addEventListener("click", (e) => {
+        cell.addEventListener("click", (e) => {
             alert(e.target.innerHTML);
             e.target.classList.toggle("focus");
         })
@@ -24,8 +25,9 @@ const main = () => {
     // Vars
     let num;
 
-    do num = parseInt(prompt("Inserisci numero celle (minino 1, massimo 50)"))
-    while (isNaN(num) || num < 1);
+    do num = parseInt(prompt("Inserisci numero celle (minino 1, massimo 10)"))
+    while (isNaN(num) || num < 1 || num > 10);
+
 
     genGrid(num);
 }

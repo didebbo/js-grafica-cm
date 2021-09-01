@@ -3,44 +3,17 @@ const grid = document.getElementById("grid");
 
 // Functions
 
-const isDiv = (num) => {
-
-    let i = 0;
-    do {
-        let a = num / i;
-        if (a == i) return true;
-        i++;
-    }
-    while (i <= num);
-    return false;
-}
-
-const numDiv = (num) => {
-
-    let i = 0;
-    do {
-        let a = num / i;
-        if (a == i) return i;
-        i++;
-    }
-    while (i <= num);
-}
-
 const genGrid = (num) => {
-
-    // let totalCells = num * num;
-
-    console.log(isDiv(num));
 
     for (let i = 1; i <= num; i++) {
         let cell = document.createElement("li");
-        cell.innerHTML = i;
-        if (isDiv(num)) grid.style.gridTemplateColumns = "repeat(" + numDiv(num) + ",1fr)";
-        else if (num <= 10) grid.style.gridTemplateColumns = "repeat(" + num + ",1fr)";
+        let content = document.createElement("div");
+        cell.appendChild(content);
+        content.innerHTML = i;
         grid.appendChild(cell);
 
         // Aggiunto evento click
-        cell.addEventListener("click", (e) => {
+        content.addEventListener("click", (e) => {
             alert(e.target.innerHTML);
             e.target.classList.toggle("focus");
         })

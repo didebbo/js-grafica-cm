@@ -14,4 +14,8 @@ body .square ul > li::after { content: ""; display: block; padding-top: 100%; }
 
 body .square ul > li > div { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; cursor: pointer; border: 0.2em solid blue; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
+body .square ul > li > div:hover { background-color: green; color: white; }
+
 body .square ul > li > div.focus { background-color: red; color: white; }
+
+body .square ul > li > div.focus:hover { background-color: darkred; }

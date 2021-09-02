@@ -19,7 +19,7 @@ const genGrid = (num) => {
         content.addEventListener("click", (e) => {
             alert(e.target.innerHTML);
             e.target.classList.toggle("focus");
-        })
+        });
     }
 }
 

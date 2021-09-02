@@ -8,7 +8,7 @@ body .square::-webkit-scrollbar { display: none; }
 
 body .square ul { width: 100%; border: 0.4em solid blue; top: 0; left: 0; list-style: none; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-body .square ul > li { border: 0.2em solid orange; display: -webkit-box; display: -ms-flexbox; display: flex; }
+body .square ul > li { width: 10%; border: 0.2em solid orange; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 body .square ul > li::after { content: ""; display: block; padding-top: 100%; }
 

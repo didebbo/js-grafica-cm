@@ -5,8 +5,11 @@ const grid = document.getElementById("grid");
 
 const genGrid = (num) => {
 
-    for (let i = 1; i <= num; i++) {
+    let totalNum = num * num;
+
+    for (let i = 1; i <= totalNum; i++) {
         let cell = document.createElement("li");
+        cell.style.width = "calc(100% /" + num + ")";
         let content = document.createElement("div");
         cell.appendChild(content);
         content.innerHTML = i;
@@ -25,7 +28,7 @@ const main = () => {
     let num;
 
     do num = parseInt(prompt("Inserisci numero celle (minino 1, massimo 10)"))
-    while (isNaN(num) || num < 1);
+    while (isNaN(num) || num < 1 || num > 10);
 
 
     genGrid(num);
